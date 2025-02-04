@@ -4,16 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pypdf = "*"
-arxiv = "*"
-huggingface-hub = "*"
-pymupdf = "*"
-rank-bm25 = "*"
-pandas = "*"
-langchain = "*"
-langchain-community = "*"
-sentence-transformers = "*"
-smolagents = {extras = ["litellm"], version = "*"}
 
 [dev-packages]
 

@@ -1,4 +1,4 @@
-from smolagents import CodeAgent, LiteLLMModel, DuckDuckGoSearchTool
+from smolagents import CodeAgent, LiteLLMModel
 # import litellm
 
 # litellm._turn_on_debug()
@@ -11,9 +11,14 @@ model = LiteLLMModel(
     set_verbose=True
 )
 
-agent = CodeAgent(tools=[], model=model, add_base_tools=True)
+agent = CodeAgent(
+  model=model, 
+  tools=[], 
+  add_base_tools=True,
+  additional_authorized_imports=['statistics', 'random', 'itertools', 're', 'queue', 'stat', 'unicodedata', 'time', 'datetime', 'math', 'collections']
+)
 
-agent.run("How many seconds would it take for a leopard at full speed to run through Pont des Arts?")
+agent.run("how long would it take to bike from karuizawa station to kyo karuizawa area?")
 
 
 
